@@ -28,7 +28,7 @@ from pathlib import Path
 # ============================================================
 from sklearn.metrics import RocCurveDisplay
 
-st.set_page_config(page_title="Team 7 CodeAvengers — Heart Failure Analysis Dashboard", layout="wide")
+st.set_page_config(page_title="Team 7 CodeAvengers — Heart Failure Analytics Dashboard", layout="wide")
 
 st.markdown(
     """
@@ -3262,10 +3262,10 @@ st.markdown("""
     font-family: Arial, sans-serif;
 ">
     <div style="font-size: 30px; font-weight: 700;">
-        Team 7 CodeAvengers — Heart Failure Analysis
+        Team 7 CodeAvengers — Heart Failure Analytics Dashboard
     </div>
     <div style="font-size: 17px; margin-top: 4px;">
-        Descriptive + Prescriptive + Predictive Analysis
+        Descriptive + Prescriptive + Prescriptive Analysis
     </div>
 </div>
 """, unsafe_allow_html=True)
@@ -3295,7 +3295,7 @@ tabs=st.tabs(["Introduction","Descriptive Analysis","Prescriptive Analysis","Pre
 
 with tabs[0]:
 
-    st.title("Heart Failure Analysis")
+    st.title("Heart Failure Analytics Dashboard")
 
     st.subheader("Introduction")
 
@@ -3607,9 +3607,65 @@ with tabs[3]:
         by accuracy alone.
         """
     )
-          # ============================================================
-    # QUESTION 2 — MODEL PERFORMANCE
+         # ============================================================
+    # QUESTION 2 — ABNORMAL RESPONSIVENESS PREDICTION
     # ============================================================
+
+    st.divider()
+
+    st.subheader(
+        "Question 2 — Abnormal Responsiveness Prediction"
+    )
+
+    # ------------------------------------------------------------
+    # QUESTION
+    # ------------------------------------------------------------
+
+    #st.markdown("#### Question")
+
+    st.write(
+        """
+        Can demographic, comorbidity, laboratory, and cardiac
+        markers predict whether a patient will show abnormal
+        responsiveness?
+        """
+    )
+
+    # ------------------------------------------------------------
+    # REASON
+    # ------------------------------------------------------------
+
+    st.markdown("#### Reason")
+
+    st.write(
+        """
+        Responsiveness can reflect a patient's overall clinical
+        condition. Predictive analysis tests whether information
+        from the other clinical tables can help distinguish
+        normal from abnormal responsiveness.
+        """
+    )
+
+    # ------------------------------------------------------------
+    # HYPOTHESIS
+    # ------------------------------------------------------------
+
+    st.markdown("#### Hypothesis")
+
+    st.write(
+        """
+        **H₀:** Demographic, comorbidity, cardiac, and laboratory
+        markers do not provide useful predictive information
+        for distinguishing normal from abnormal responsiveness.
+        """
+    )
+
+    st.write(
+        """
+        **H₁:** These markers contain useful predictive information
+        for distinguishing patients with abnormal responsiveness.
+        """
+    )
 
     st.markdown("#### Model Performance")
 
